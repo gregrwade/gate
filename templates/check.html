@@ -1,0 +1,20 @@
+<!doctype html>
+<title>Gate Keeper</title>
+{% if is_locked == True %}
+    <p>The gate is CLOSED</p>
+{% else %} 
+    <p>The gate is OPEN</p>
+{% endif %}
+
+<h3>Actions:</h3>
+    <p><a href="/open">open the gate</a></p>
+<p><a href="/close">close the gate</a></p>
+
+<h3>Rules:</h3>
+{% for rule in rules %}
+<p>{{rule}}</p>
+
+{% endfor %}
+
+
+
